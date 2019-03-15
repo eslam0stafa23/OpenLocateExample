@@ -16,7 +16,7 @@ public class Init extends Application {
     public void onCreate(){
         super.onCreate();
 
-        OpenLocate.Configuration configuration = new OpenLocate.Configuration.Builder(this, "https://openlocateexample.firebaseio.com/")
+        OpenLocate.Configuration configuration = new OpenLocate.Configuration.Builder(this, "https://openlocateexample.firebaseio.com/.json")
                 .setHeaders(getHeaderParams())
                 .build();
 
