@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrackingFragment"
-    android:layout_gravity="center"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/statues_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text=""
+        android:textSize="30sp" />
 
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:text="@string/start_tracking"
+        android:textColor="@android:color/holo_green_dark" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints"
-            android:gravity="center"
-            android:layout_gravity="center">
-
-            <Button
-                android:id="@+id/startbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/start_tracking"
-                android:layout_margin="20dp"/>
-
-
-            <Button
-                android:id="@+id/stopbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/stop_tracking"
-                android:layout_margin="20dp"/>
-
-        </LinearLayout>
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:text="@string/stop_tracking"
+        android:textColor="@android:color/holo_red_dark" />
 
 
 </LinearLayout>

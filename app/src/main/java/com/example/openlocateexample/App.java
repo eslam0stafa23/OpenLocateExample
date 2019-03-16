@@ -2,21 +2,21 @@ package com.example.openlocateexample;
 
 import android.app.Application;
 
+import com.openlocate.android.core.LocationAccuracy;
 import com.openlocate.android.core.OpenLocate;
 
 import java.util.HashMap;
 
-public class Init extends Application {
-
-    public static Init getInstance() {
-        return new Init();
-    }
+public class App extends Application {
 
     @Override
     public void onCreate(){
         super.onCreate();
 
         OpenLocate.Configuration configuration = new OpenLocate.Configuration.Builder(this, "https://openlocateexample.firebaseio.com/.json")
+                .setLocationAccuracy(LocationAccuracy.HIGH)
+                .setLocationUpdateInterval(12000)
+                .setTransmissionInterval(60000)
                 .setHeaders(getHeaderParams())
                 .build();
 
