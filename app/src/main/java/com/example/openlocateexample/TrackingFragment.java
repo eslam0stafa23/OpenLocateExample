@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.openlocate.android.callbacks.OpenLocateLocationCallback;
 import com.openlocate.android.core.OpenLocate;
+import com.openlocate.android.core.OpenLocateLocation;
 
 public class TrackingFragment extends Fragment {
 

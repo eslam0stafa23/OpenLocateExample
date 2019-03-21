@@ -10,22 +10,23 @@ import java.util.HashMap;
 public class App extends Application {
 
     @Override
-    public void onCreate(){
+    public void onCreate() {
         super.onCreate();
 
         OpenLocate.Configuration configuration = new OpenLocate.Configuration.Builder(this, "https://openlocateexample.firebaseio.com/.json")
                 .setLocationAccuracy(LocationAccuracy.HIGH)
-                .setLocationUpdateInterval(12000)
-                .setTransmissionInterval(60000)
+                .setLocationUpdateInterval(30)
+                .setTransmissionInterval(60)
                 .setHeaders(getHeaderParams())
                 .build();
 
         OpenLocate.initialize(configuration);
     }
 
-    public HashMap<String, String> getHeaderParams () {
+    public HashMap<String, String> getHeaderParams() {
         HashMap<String, String> params = new HashMap<>();
         params.put("Content-Type", "application/json");
         return params;
     }
 }
+
